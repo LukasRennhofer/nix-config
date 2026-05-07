@@ -1,0 +1,39 @@
+command=/run/current-system/sw/bin/bash
+separator=true
+separator_block_width=20
+markup=pango
+
+[volume]
+command=echo "󰕾 $(pactl get-sink-volume @DEFAULT_SINK@ | head -n1 | awk '{print $5}')"
+interval=1
+color=#88c0d0
+
+[cpu]
+command=echo "󰍛 $(top -bn1 | grep "Cpu(s)" | awk '{print int($2+$4)"%"}')"
+interval=3
+color=#81a1c1
+
+[memory]
+command=free -h | awk '/Mem:/ {print "󰘚 "$3 "/" $2}'
+interval=5
+color=#5e81ac
+
+[disk]
+command=df -h / | awk 'END{print "󰋊 "$3 "/" $2}'
+interval=30
+color=#8fbcbb
+
+[network]
+command=nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -d: -f2 | awk '{print "󰖩 "$0}'
+interval=10
+color=#88c0d0
+
+[battery]
+command=acpi -b | awk -F', ' '{print "󰁹 " $2}'
+interval=30
+color=#a3be8c
+
+[time]
+command=date '+󰃰 %a %d %b  󰥔 %H:%M'
+interval=60
+color=#d8dee9
