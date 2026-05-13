@@ -8,4 +8,6 @@ It just includes my terminal and i3 configurations, because I dont like that muc
 
 ## Setup
 
-Just run `./setup.sh` for setting everything up and `./setup.sh update` for updating the dotfile symlinks (should work everytime hopefully). 
+Just run `./setup.sh` for setting everything up and `./setup.sh update` for updating the dotfile symlinks. Existing destination paths are removed and replaced with symlinks.
+
+`hardware-configuration.nix` stays in the repo and is not symlinked by the setup script.

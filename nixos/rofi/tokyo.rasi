@@ -1,0 +1,19 @@
+* {
+  /* Nix Blue Theme colors from i3 config */
+  bg0       : #0f111a;
+  bg1       : #1b2130;
+  bg2       : #1b2130;
+  bg3       : #3b4252;
+  fg0       : #d8dee9;
+  fg1       : #d8dee9;
+  fg2       : #4c566a;
+  red       : #bf616a;
+  green     : #9ece6a;
+  yellow    : #e0af68;
+  blue      : #5e81ac;
+  magenta   : #5e81ac;
+  cyan      : #88c0d0;
+
+  accent: @blue;
+  urgent: @red;
+}
