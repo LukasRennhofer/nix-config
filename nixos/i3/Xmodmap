@@ -1,0 +1,8 @@
+! Xmodmap to provide '<' and '>' on an American physical keyboard while using
+! the Austrian (de) layout. Replace <KEYCODE> with the keycode for your
+! physical key (see instructions below).
+
+! Example: map keycode N (common on many keyboards left of left Shift)
+keycode N = less greater
+
+! If this doesn't work, run `xev` to find the keycode and update this file.

@@ -1,19 +1,19 @@
 * {
-  /* Nix Blue Theme colors from i3 config */
-  bg0       : #0f111a;
-  bg1       : #1b2130;
-  bg2       : #1b2130;
-  bg3       : #3b4252;
-  fg0       : #d8dee9;
-  fg1       : #d8dee9;
-  fg2       : #4c566a;
-  red       : #bf616a;
-  green     : #9ece6a;
-  yellow    : #e0af68;
-  blue      : #5e81ac;
-  magenta   : #5e81ac;
-  cyan      : #88c0d0;
+  /* Gruvbox Dark Theme */
+  bg0       : #282828;
+  bg1       : #3c3836;
+  bg2       : #504945;
+  bg3       : #665c54;
+  fg0       : #ebdbb2;
+  fg1       : #d5c4a1;
+  fg2       : #7c6f64;
+  red       : #cc241d;
+  green     : #98971a;
+  yellow    : #d79921;
+  blue      : #83a598;
+  magenta   : #b16286;
+  cyan      : #689d6a;
 
-  accent: @blue;
+  accent: @yellow;
   urgent: @red;
 }

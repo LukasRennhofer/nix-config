@@ -7,11 +7,12 @@
 set $mod Mod4
 
 exec_always --no-startup-id xsetroot -solid "#1d1f21"
-exec --no-startup-id xrandr --output HDMI-A-0 --auto --right-of eDP
+exec --no-startup-id xrandr --output HDMI-1 --primary --auto --output eDP-1 --auto --right-of HDMI-1
+exec_always --no-startup-id xmodmap $HOME/nix-config/nixos/i3/Xmodmap
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # Wallpaper
-exec_always --no-startup-id feh --bg-fill ~/.wallpapers/wallpaper-7.png
+exec_always --no-startup-id feh --bg-fill ~/.wallpapers/wallpaper-8.png
 exec --no-startup-id dunst
 
 
@@ -192,17 +193,22 @@ exec_always --no-startup-id bash ~/.config/polybar/launch.sh
 
 # ─── Nix Blue Theme ─────────────────────────────
 
-set $bg        #0f111a
-set $bg-alt    #1b2130
-set $fg        #d8dee9
+# Gruvbox Dark Theme
+set $bg        #282828
+set $bg-alt    #3c3836
+set $fg        #ebdbb2
 
-set $blue      #5e81ac
-set $cyan      #88c0d0
-set $blue-dark #3b4252
-set $inactive  #4c566a
+set $blue      #83a598
+set $cyan      #689d6a
+set $blue-dark #458588
+set $inactive  #7c6f64
+set $red       #cc241d
+set $green     #98971a
+set $yellow    #d79921
+set $magenta   #b16286
 
 # class                 border     bg         text       indicator  child_border
-client.focused          $blue-dark $bg        $fg        $cyan      $blue-dark
+client.focused          $inactive  $bg        $fg        $yellow    $inactive
 client.unfocused        $inactive  $bg-alt    $fg        $inactive  $inactive
 client.focused_inactive $inactive  $bg-alt    $fg        $inactive  $inactive
-client.urgent           #bf616a    #bf616a    $fg        #bf616a    #bf616a
+client.urgent           $red       $red       $fg        $red       $red
