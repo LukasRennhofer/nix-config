@@ -36,7 +36,7 @@ link_path() {
 
 link_config_dir() {
   local name="$1"
-  link_path "$REPO_DIR/nixos/$name" "$CONFIG_HOME/$name"
+  link_path "$REPO_DIR/debian/$name" "$CONFIG_HOME/$name"
 }
 
 section "Dotfiles"
